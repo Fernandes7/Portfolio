@@ -10,20 +10,10 @@ export const profile = {
   location: 'Kochi, Kerala, India',
   linkedin: 'https://www.linkedin.com/in/fernandes7/',
   github: 'https://github.com/Fernandes7',
+  instagram: 'https://www.instagram.com/ferno_oxplozd/',
+  twitter: '',   // TODO: paste Twitter/X profile URL — icon shows once set
   resume: '/Fernandes_KJ_Resume.pdf',
 }
-
-
-// Organisations whose apps / platforms ship code I built (from resume)
-export const trustedBy = [
-  { name: 'BillDesk', logo: '/logos/billdesk.png' },
-  { name: 'IRCTC RailOne', logo: '/logos/irctc.png' },
-  { name: 'HDFC Bank', logo: '/logos/hdfc.png' },
-  { name: 'IDFC FIRST Bank', logo: '/logos/idfc.png' },
-  { name: 'Indian Oil', logo: '/logos/iocl.png' },
-  { name: 'NPCI · BHIM', logo: '/logos/npci.png' },
-  { name: 'KSRTC', logo: '/logos/ksrtc.png' },
-]
 
 export const aboutStats = [
   { value: '3+', label: 'Years Experience', icon: 'briefcase' },
@@ -65,7 +55,7 @@ export const experience = [
     company: 'Hatio Innovations',
     summary: "Building BillDesk's Android Payment Gateway SDK and backend services — Cards, UPI, NetBanking and mandate flows for an ecosystem handling 3M+ transactions a day, hardened for security and EMVCo 3DS certified.",
     sub: 'BillDesk Subsidiary',
-    logo: '/logos/billdesk.png',
+    logo: '/logos/hatio.svg',
     period: 'Aug 2024 – Present',
     type: 'Full-time · Kochi',
     stack: ['Kotlin', 'Jetpack Compose', 'MVVM / MVI', 'Java 17', 'Spring Boot', 'Kafka', 'Oracle', 'Vue.js', 'React'],

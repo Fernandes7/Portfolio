@@ -10,16 +10,16 @@ import {
 import { FaJava } from 'react-icons/fa'
 import { GiCrown, GiCheckedShield, GiStarsStack, GiCastle, GiCrossedSwords } from 'react-icons/gi'
 import {
-  FiArrowUpRight, FiArrowUp, FiDownload, FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend, FiHome, FiUser, FiGrid, FiClock, FiBox, FiTerminal, FiUsers, FiGitBranch, FiDatabase, FiRepeat, FiBookOpen, FiLock, FiSmartphone, FiCloud,
+  FiArrowUpRight, FiArrowUp, FiDownload, FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiInstagram, FiTwitter, FiSend, FiHome, FiUser, FiGrid, FiClock, FiBox, FiTerminal, FiUsers, FiGitBranch, FiDatabase, FiRepeat, FiBookOpen, FiLock, FiSmartphone, FiCloud,
   FiBriefcase, FiActivity, FiLayers, FiAward, FiCreditCard, FiShield, FiServer,
-  FiZap, FiGlobe, FiCpu, FiExternalLink,
+  FiZap, FiGlobe, FiCpu, FiExternalLink, FiSearch, FiFileText, FiPenTool, FiCode,
 } from 'react-icons/fi'
 import {
-  LuSparkles, LuGraduationCap, LuCompass, LuImages, LuTrees, LuSnowflake, LuCamera, LuMapPin,
-  LuX, LuChevronLeft, LuChevronRight, LuPlane, LuFootprints, LuSunset,
+  LuGraduationCap, LuCompass, LuImages, LuTrees, LuSnowflake, LuCamera, LuMapPin,
+  LuX, LuChevronLeft, LuChevronRight, LuPlane, LuFootprints, LuSunset, LuRocket,
 } from 'react-icons/lu'
 import {
-  profile, trustedBy, aboutStats, about, services, techGroups, experience, projects, process, architecture, expertise, education, clan, travel,
+  profile, aboutStats, about, services, techGroups, experience, projects, process, architecture, expertise, education, clan, travel,
 } from './data'
 
 /* ---------------- icon registries ---------------- */
@@ -28,23 +28,23 @@ const OracleIcon = () => (
 )
 const TECH = {
   Kotlin: [SiKotlin, '#7F52FF'], Android: [SiAndroid, '#3DDC84'], 'Jetpack Compose': [SiJetpackcompose, '#4285F4'],
-  'Android Studio': [SiAndroidstudio, '#3DDC84'], Gradle: [SiGradle, '#02303A'], Firebase: [SiFirebase, '#FFCA28'],
-  Java: [FaJava, '#E76F00'], 'Spring Boot': [SiSpringboot, '#6DB33F'], 'Apache Kafka': [SiApachekafka, '#231F20'],
-  'Node.js': [SiNodedotjs, '#5FA04E'], Express: [SiExpress, '#000000'], Fastify: [SiFastify, '#000000'],
+  'Android Studio': [SiAndroidstudio, '#3DDC84'], Gradle: [SiGradle, '#e5e7eb'], Firebase: [SiFirebase, '#FFCA28'],
+  Java: [FaJava, '#E76F00'], 'Spring Boot': [SiSpringboot, '#6DB33F'], 'Apache Kafka': [SiApachekafka, '#e5e7eb'],
+  'Node.js': [SiNodedotjs, '#5FA04E'], Express: [SiExpress, '#e5e7eb'], Fastify: [SiFastify, '#e5e7eb'],
   Maven: [SiApachemaven, '#C71A36'], JUnit5: [SiJunit5, '#25A162'], PostgreSQL: [SiPostgresql, '#4169E1'],
-  MongoDB: [SiMongodb, '#47A248'], Oracle: [OracleIcon, '#F80000'], Redis: [SiRedis, '#FF4438'], Prisma: [SiPrisma, '#2D3748'],
-  SQLite: [SiSqlite, '#003B57'], React: [SiReact, '#61DAFB'], 'Next.js': [SiNextdotjs, '#000000'], 'Vue.js': [SiVuedotjs, '#4FC08D'],
+  MongoDB: [SiMongodb, '#47A248'], Oracle: [OracleIcon, '#F80000'], Redis: [SiRedis, '#FF4438'], Prisma: [SiPrisma, '#e5e7eb'],
+  SQLite: [SiSqlite, '#e5e7eb'], React: [SiReact, '#61DAFB'], 'Next.js': [SiNextdotjs, '#e5e7eb'], 'Vue.js': [SiVuedotjs, '#4FC08D'],
   TypeScript: [SiTypescript, '#3178C6'], JavaScript: [SiJavascript, '#F7DF1E'], 'Tailwind CSS': [SiTailwindcss, '#06B6D4'],
-  Vite: [SiVite, '#646CFF'], Python: [SiPython, '#3776AB'], LangChain: [SiLangchain, '#1C3C3C'], Gemini: [SiGooglegemini, '#8E75B2'],
-  Docker: [SiDocker, '#2496ED'], Git: [SiGit, '#F05032'], Linux: [SiLinux, '#1f2937'], Postman: [SiPostman, '#FF6C37'],
-  'IntelliJ IDEA': [SiIntellijidea, '#000000'], Jira: [SiJira, '#0052CC'], Figma: [SiFigma, '#F24E1E'],
+  Vite: [SiVite, '#646CFF'], Python: [SiPython, '#3776AB'], LangChain: [SiLangchain, '#e5e7eb'], Gemini: [SiGooglegemini, '#8E75B2'],
+  Docker: [SiDocker, '#2496ED'], Git: [SiGit, '#F05032'], Linux: [SiLinux, '#e5e7eb'], Postman: [SiPostman, '#FF6C37'],
+  'IntelliJ IDEA': [SiIntellijidea, '#e5e7eb'], Jira: [SiJira, '#0052CC'], Figma: [SiFigma, '#F24E1E'],
 }
 // Tag chips: brand icon from TECH (via alias), else a generic icon; unknown tags render text-only
 const TAG_ALIAS = { 'Android SDK': 'Android', Compose: 'Jetpack Compose', 'Java 17': 'Java', Kafka: 'Apache Kafka', 'Prisma ORM': 'Prisma', 'React.js': 'React' }
 const TAG_EXTRA = {
   Payments: [FiCreditCard, '#7c3aed'], 'MVVM / MVI': [FiLayers, '#6366f1'], 'REST APIs': [FiServer, '#0ea5e9'], SQL: [FiDatabase, '#0891b2'],
   Room: [FiDatabase, '#3DDC84'], WorkManager: [FiClock, '#3DDC84'], SceneView: [FiBox, '#6366f1'], Filament: [FiBox, '#f97316'],
-  Flask: [SiFlask, '#000000'], CLI: [FiTerminal, '#111827'], RBAC: [FiShield, '#7c3aed'], 'Sentiment AI': [FiCpu, '#ec4899'],
+  Flask: [SiFlask, '#e5e7eb'], CLI: [FiTerminal, '#e5e7eb'], RBAC: [FiShield, '#7c3aed'], 'Sentiment AI': [FiCpu, '#ec4899'],
   'AI Agents': [FiCpu, '#2563eb'], 'Multi-Agent': [FiUsers, '#7c3aed'], Orchestration: [FiGitBranch, '#0ea5e9'],
 }
 const Chip = ({ label }) => {
@@ -105,10 +105,10 @@ const Item = ({ as = 'div', children, ...rest }) => {
   return <M variants={fadeUp} {...rest}>{children}</M>
 }
 
-const Head = ({ eyebrow, title, accent, text, children }) => (
+const Head = ({ num, eyebrow, title, accent, text, children }) => (
   <Reveal className="sec-head">
     <div>
-      <span className="eyebrow">{eyebrow}</span>
+      <span className="eyebrow">{num && <i className="sec-num">{num}</i>}{eyebrow}</span>
       <h2>{title} {accent && <span className="grad-text">{accent}</span>}</h2>
     </div>
     {text && <p>{text}</p>}
@@ -130,7 +130,7 @@ function useTyped(words, speed = 65, pause = 1700) {
   return text
 }
 
-function CountUp({ value }) {
+function CountUp({ value, pad }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
   const [, num, suffix] = value.match(/^([\d.]+)(.*)$/)
@@ -147,7 +147,8 @@ function CountUp({ value }) {
     raf = requestAnimationFrame(step)
     return () => cancelAnimationFrame(raf)
   }, [inView, num])
-  return <b ref={ref}>{num.includes('.') ? n.toFixed(2) : Math.round(n)}{suffix}</b>
+  const int = String(Math.round(n))
+  return <b ref={ref}>{num.includes('.') ? n.toFixed(2) : pad ? int.padStart(2, '0') : int}{suffix}</b>
 }
 
 // Subtle 3D tilt that follows the pointer (mouse only)
@@ -216,6 +217,8 @@ function Nav({ path }) {
   )
 }
 
+const SOCIALS = [['LinkedIn', profile.linkedin, FiLinkedin], ['GitHub', profile.github, FiGithub], ['Twitter', profile.twitter, FiTwitter], ['Instagram', profile.instagram, FiInstagram]]
+
 const Typed = ({ words }) => <span className="typed-text">{useTyped(words)}</span>
 
 function Hero() {
@@ -229,14 +232,13 @@ function Hero() {
     <section id="home" className="hero" ref={ref}>
       <div className="shell">
         <div className="panel">
-          <span className="bubble" style={{ width: 120, height: 120, right: -30, top: 40, opacity: 0.6 }} />
           <div className="hero-grid">
             <div>
-              <motion.span className="eyebrow" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>Hello, I'm</motion.span>
+              <motion.span className="hello-pill" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}><i />Hello, I'm</motion.span>
               <h1>
                 {words.map((w, i) => (
                   <span key={w} style={{ display: 'inline-block', overflow: 'hidden', verticalAlign: 'top', paddingBottom: 4 }}>
-                    <motion.span className="word" initial={{ y: '110%' }} animate={{ y: 0 }} transition={{ delay: 0.4 + i * 0.12, duration: 0.9, ease }}>
+                    <motion.span className={`word ${i === words.length - 1 ? 'grad-text' : ''}`} initial={{ y: '110%' }} animate={{ y: 0 }} transition={{ delay: 0.4 + i * 0.12, duration: 0.9, ease }}>
                       {w}{i < words.length - 1 ? ' ' : ''}
                     </motion.span>
                   </span>
@@ -258,17 +260,11 @@ function Hero() {
                 <Link to="/work" className="btn btn-dark">View My Work <FiArrowUpRight /></Link>
                 <a href={profile.resume} download className="btn btn-glass">Download CV <FiDownload /></a>
               </motion.div>
-              <motion.div className="trusted" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.6, duration: 0.7 }}>
-                <small>My code ships in apps &amp; platforms of</small>
-                <div className="marquee">
-                  <div className="marquee-track">
-                    {[...trustedBy, ...trustedBy].map((t, i) => (
-                      <span key={i} className="logo-item" aria-hidden={i >= trustedBy.length || undefined}>
-                        <img src={t.logo} alt={i < trustedBy.length ? `${t.name} logo` : ''} />{t.name}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              <motion.div className="follow" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.6, duration: 0.7 }}>
+                <small>Follow me</small>
+                {SOCIALS.filter(([, href]) => href).map(([label, href, Icon]) => (
+                  <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon /></a>
+                ))}
               </motion.div>
             </div>
 
@@ -276,13 +272,13 @@ function Hero() {
               <motion.div className="portrait-frame" style={{ y: imgY }}
                 initial={{ opacity: 0, scale: 0.92, rotate: -3 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ delay: 0.3, duration: 1.1, ease }}>
                 <div className="portrait">
-                  <motion.img src="/hero-art.webp" alt={profile.name} initial={{ scale: 1.25 }} animate={{ scale: 1.04 }} transition={{ duration: 1.6, ease }} />
+                  <motion.img src="/hero-ai.webp" alt={profile.name} initial={{ scale: 1.25 }} animate={{ scale: 1.04 }} transition={{ duration: 1.6, ease }} />
                 </div>
               </motion.div>
 
               <motion.div className="float-card fc-exp" style={{ y: cardY }} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.1, type: 'spring', stiffness: 120 }}>
                 <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
-                  <b className="grad-text">3+</b><span>Years of<br />Experience</span>
+                  <span>Years of Experience</span><b className="grad-text">3+</b>
                 </motion.div>
               </motion.div>
 
@@ -302,11 +298,6 @@ function Hero() {
                     initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 1.8, duration: 1.4, ease: 'easeInOut' }} />
                 </svg>
               </motion.div>
-
-              <motion.span className="bubble sparkle" initial={{ scale: 0 }} animate={{ scale: 1, y: [0, -10, 0] }}
-                transition={{ scale: { delay: 1.4, type: 'spring' }, y: { duration: 5, repeat: Infinity, ease: 'easeInOut' } }} style={{ position: 'absolute' }}>
-                <LuSparkles />
-              </motion.span>
             </div>
           </div>
         </div>
@@ -351,10 +342,10 @@ function About() {
                         )
                       })}
                     </Stagger>
-                    <Stagger className="stat-grid glass" gap={0.08}>
+                    <Stagger className="stat-grid" gap={0.08}>
                       {aboutStats.map((s) => (
                         <Item className="stat" key={s.label}>
-                          <CountUp value={s.value} />
+                          <CountUp value={s.value} pad />
                           <span>{s.label}</span>
                         </Item>
                       ))}
@@ -529,11 +520,11 @@ function FeaturedWork() {
     <section id="featured">
       <div className="shell">
         <div className="panel">
-          <Head eyebrow="Featured Projects" title="Selected" accent="Work">
+          <Head num="01" eyebrow="Featured Projects" title="Selected" accent="Work">
             <Link to="/work" className="btn btn-glass btn-sm">View All Projects <FiArrowUpRight /></Link>
           </Head>
           <Stagger className="feat-grid" gap={0.12}>
-            {projects.slice(0, 3).map((p) => (
+            {projects.slice(0, 4).map((p) => (
               <Item key={p.title} className="feat glass lift">
                 <div className="feat-cover">
                   <img src={p.image} alt={`${p.title} preview`} loading="lazy" style={p.imagePos ? { objectPosition: p.imagePos } : undefined} />
@@ -559,7 +550,7 @@ function WhatIDo() {
     <section id="services">
       <div className="shell">
         <div className="panel">
-          <Head eyebrow="Services" title="What I" accent="Do" />
+          <Head num="02" eyebrow="Services" title="What I" accent="Do" />
           <Stagger className="do-grid" gap={0.08}>
             {services.slice(0, 4).map((s) => {
               const Icon = UI[s.icon]
@@ -619,7 +610,7 @@ function Expertise() {
     <section id="expertise">
       <div className="shell">
         <div className="panel">
-          <Head eyebrow="Tools & Skills" title="My" accent="Expertise" />
+          <Head num="03" eyebrow="Tools & Skills" title="My" accent="Expertise" />
           <div className="xp-grid">
             <Stagger className="xp-bars" gap={0.08}>
               {expertise.bars.map((b, i) => (
@@ -651,7 +642,7 @@ function Expertise() {
 
 const ARCH_ICONS = {
   compose: [SiJetpackcompose, '#4285F4'], state: [FiRepeat, '#7c3aed'], card: [FiCreditCard, '#8b5cf6'], db: [FiDatabase, '#0891b2'],
-  shield: [FiShield, '#16a34a'], spring: [SiSpringboot, '#6DB33F'], server: [FiServer, '#0ea5e9'], kafka: [SiApachekafka, '#231F20'],
+  shield: [FiShield, '#16a34a'], spring: [SiSpringboot, '#6DB33F'], server: [FiServer, '#0ea5e9'], kafka: [SiApachekafka, '#e5e7eb'],
   ledger: [FiBookOpen, '#f59e0b'], oracle: [OracleIcon, '#F80000'],
 }
 
@@ -696,23 +687,28 @@ function Architecture() {
   )
 }
 
+const STEP_ICONS = [FiSearch, FiFileText, FiPenTool, FiCode, FiShield, LuRocket]   // one per process step, in order
+
 function Process() {
   return (
     <section id="process">
       <div className="shell">
         <div className="panel">
-          <Head eyebrow="My Process" title="A Simple, Effective" accent="Process" />
+          <Head num="04" eyebrow="My Process" title="A Simple, Effective" accent="Process" />
           <div className="steps">
             <motion.span className="steps-line" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1.2, ease }} />
             <Stagger className="steps-grid" gap={0.12}>
-              {process.map((s, i) => (
+              {process.map((s, i) => {
+                const Icon = STEP_ICONS[i]
+                return (
                 <Item key={s.title} className="step">
-                  <span className="step-num">0{i + 1}</span>
-                  <h4>{s.title}</h4>
+                  <span className="step-num"><Icon /></span>
+                  <h4><b>0{i + 1}</b>{s.title}</h4>
                   <p>{s.text}</p>
                   {s.tags && <div className="step-tags">{s.tags.map((tg) => <span key={tg}>{tg}</span>)}</div>}
                 </Item>
-              ))}
+                )
+              })}
             </Stagger>
           </div>
           <Architecture />
@@ -794,7 +790,7 @@ function Education() {
               <div className="cgpa-ring">
                 <svg viewBox="0 0 120 120">
                   <defs><linearGradient id="ring" x1="0" x2="1"><stop stopColor="#8b5cf6" /><stop offset="1" stopColor="#3b82f6" /></linearGradient></defs>
-                  <circle cx="60" cy="60" r="52" stroke="#ece9fb" strokeWidth="10" fill="none" />
+                  <circle cx="60" cy="60" r="52" stroke="rgba(139,92,246,.15)" strokeWidth="10" fill="none" />
                   <motion.circle cx="60" cy="60" r="52" stroke="url(#ring)" strokeWidth="10" fill="none" strokeLinecap="round" strokeDasharray={C}
                     initial={{ strokeDashoffset: C }} whileInView={{ strokeDashoffset: C * (1 - pct) }} viewport={{ once: true }} transition={{ duration: 1.6, ease }} />
                 </svg>
@@ -857,8 +853,9 @@ function Contact() {
                 })}
               </div>
               <div className="socials">
-                <a className="icon-btn" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
-                <a className="icon-btn" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
+                {SOCIALS.filter(([, href]) => href).map(([label, href, Icon]) => (
+                  <a key={label} className="icon-btn" href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon /></a>
+                ))}
                 <a className="icon-btn" href={`mailto:${profile.email}`} aria-label="Email"><FiMail /></a>
                 <a className="icon-btn" href={profile.resume} download aria-label="Download resume"><FiDownload /></a>
               </div>
@@ -1022,18 +1019,21 @@ function Travel() {
   )
 }
 
-const PROFILE_TABS = [['pro', 'Professional', FiBriefcase], ['personal', 'Personal', FiUser]]
+const PROFILE_TABS = [['pro', 'Professional', FiBriefcase, 'Experience · Skills · Education'], ['personal', 'Personal', FiUser, 'Travel · Leadership']]
 
 function ProfileTabs() {
   const [tab, setTab] = useState('pro')
   return (
     <>
       <div className="seg-wrap shell">
+        <span className="seg-hint">Explore both sides of me</span>
         <div className="seg" role="tablist" aria-label="Profile">
-          {PROFILE_TABS.map(([k, label, Icon]) => (
+          {PROFILE_TABS.map(([k, label, Icon, sub]) => (
             <button key={k} role="tab" aria-selected={tab === k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>
               {tab === k && <motion.span layoutId="seg-pill" className="seg-pill" transition={{ type: 'spring', stiffness: 400, damping: 32 }} />}
-              <Icon /> {label}
+              <span className="seg-ico"><Icon /></span>
+              <span className="seg-txt"><b>{label}</b><small>{sub}</small></span>
+              {tab !== k && <span className="seg-ping" aria-hidden="true" />}
             </button>
           ))}
         </div>
