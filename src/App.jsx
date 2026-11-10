@@ -453,29 +453,15 @@ function Experience() {
   )
 }
 
-const Mock = ({ kind }) => {
-  if (kind === 'kafka') return (
-    <div className="mock mock-kafka">
-      <div className="k-flow">
-        <div className="k-box">Order API</div><span className="k-dot" />
-        <div className="k-box k-topic">orders</div><span className="k-dot" style={{ animationDelay: '.5s' }} />
-        <div className="k-cons"><div className="k-box">inventory</div><div className="k-box">notification</div><div className="k-box">analytics</div></div>
-      </div>
+const Mock = () => (
+  <div className="mock mock-kafka">
+    <div className="k-flow">
+      <div className="k-box">Order API</div><span className="k-dot" />
+      <div className="k-box k-topic">orders</div><span className="k-dot" style={{ animationDelay: '.5s' }} />
+      <div className="k-cons"><div className="k-box">inventory</div><div className="k-box">notification</div><div className="k-box">analytics</div></div>
     </div>
-  )
-  return (
-    <div className="mock mock-cli">
-      <div className="term">
-        <div className="bar"><i style={{ background: '#f87171' }} /><i style={{ background: '#fbbf24' }} /><i style={{ background: '#4ade80' }} /></div>
-        <div><span className="p">dev@box:~$</span> nosudo install docker</div>
-        <div className="ok">✔ role: developer · whitelisted</div>
-        <div className="ok">✔ installed docker 27.1</div>
-        <div><span className="p">dev@box:~$</span> nosudo install nmap</div>
-        <div className="no">✖ not in whitelist — request sent</div>
-      </div>
-    </div>
-  )
-}
+  </div>
+)
 
 function Work() {
   return (
@@ -489,7 +475,7 @@ function Work() {
             {projects.map((p) => (
               <Tilt key={p.title} className="proj glass lift">
                 <div className={`proj-cover ${p.imageFit === 'logo' ? 'logo' : ''}`} style={p.bg ? { background: p.bg } : undefined}>
-                  {p.image ? <img src={p.image} alt={`${p.title} preview`} loading="lazy" style={p.imagePos ? { objectPosition: p.imagePos } : undefined} /> : <Mock kind={p.mock} />}
+                  {p.image ? <img src={p.image} alt={`${p.title} preview`} loading="lazy" style={p.imagePos ? { objectPosition: p.imagePos } : undefined} /> : <Mock />}
                   {(p.live || p.code) && (
                     <div className="overlay">
                       {p.live && <a className="btn btn-glass btn-sm" href={p.live} target="_blank" rel="noreferrer">Live <FiExternalLink /></a>}
@@ -829,7 +815,7 @@ function Contact() {
           <motion.span className="bubble" style={{ width: 220, height: 220, right: -70, bottom: -70 }} animate={{ y: [0, -16, 0], rotate: [0, 10, 0] }} transition={{ duration: 9, repeat: Infinity }} />
           <Reveal className="resume-card glass">
             <a className="resume-page" href={profile.resume} target="_blank" rel="noreferrer" aria-label="Open full resume (PDF)">
-              <img src="/resume-page1.webp" alt="First page of Fernandes K J's resume" loading="lazy" />
+              <img src="/resume-page1.png" alt="First page of Fernandes K J's resume" loading="lazy" />
               <span className="resume-zoom"><FiExternalLink /> View full PDF</span>
             </a>
             <div className="resume-info">

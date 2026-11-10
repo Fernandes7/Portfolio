@@ -228,13 +228,6 @@ export const projects = [
     image: '/work/food-snap.jpg',
     imagePos: 'center 45%',
   },
-  {
-    title: 'No-Sudo Installer',
-    type: 'CLI · Security Tooling',
-    desc: 'Secure CLI with backend-driven command execution and role-based access — devs install whitelisted software without sudo.',
-    tags: ['CLI', 'RBAC', 'Linux', 'Node.js'],
-    mock: 'cli',
-  },
 ]
 
 export const process = [
